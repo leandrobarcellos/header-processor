@@ -1,6 +1,6 @@
 package br.org.learn.leandro.beans;
 
-import br.org.learn.leandro.config.HeaderProcessorProperties;
+import br.org.learn.leandro.config.DefaultHeaderProcessorProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -8,19 +8,22 @@ import org.springframework.stereotype.Component;
 @Component
 public class Interceptador {
 
-    private final HeaderProcessorProperties properties;
-
+    private final DefaultHeaderProcessorProperties properties;
 
     public String getFirstHeader() {
-        return properties.getFirstHeader();
+        return properties.getFirst();
     }
 
     public String getSecondHeader() {
-        return properties.getSecondHeader();
+        return properties.getSecond();
     }
 
     public String getThirdHeader() {
-        return properties.getThirdHeader();
+        return properties.getThird();
+    }
+
+    public String getFourth() {
+        return properties.getFourthHeader();
     }
 
 }
