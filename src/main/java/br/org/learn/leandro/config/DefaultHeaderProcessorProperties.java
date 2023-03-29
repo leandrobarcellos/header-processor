@@ -15,5 +15,5 @@ public class DefaultHeaderProcessorProperties {
     private String second;
     private String third;
     private String fourthHeader;
-
+    private boolean enableTimer;
 }
